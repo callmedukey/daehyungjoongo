@@ -11,13 +11,45 @@ import SecondShip from "@/public/img/second-ship.jpeg";
 import VectorShip from "@/public/img/vector-ship.svg";
 import Phone from "@/public/img/phone.svg";
 import Office from "@/public/img/office.svg";
-
+import Partner1 from "@/public/img/partner-1.png";
+import Partner2 from "@/public/img/partner-2.png";
+import Partner3 from "@/public/img/partner-3.png";
+import Partner4 from "@/public/img/partner-4.png";
+import Partner5 from "@/public/img/partner-5.png";
+import Partner6 from "@/public/img/partner-6.png";
 import Step1 from "@/public/img/stage-1.jpeg";
 import Step2 from "@/public/img/stage-2.jpeg";
 import Step3 from "@/public/img/stage-3.png";
 import Step4 from "@/public/img/stage-4.jpeg";
 import Step5 from "@/public/img/stage-5.jpeg";
 import Step6 from "@/public/img/stage-6.png";
+
+const partners = [
+  {
+    src: Partner1,
+    alt: "파트너 하나캐피털",
+  },
+  {
+    src: Partner2,
+    alt: "파트너 우리은행",
+  },
+  {
+    src: Partner3,
+    alt: "파트너 DB손해보험",
+  },
+  {
+    src: Partner4,
+    alt: "파트너 신한은행",
+  },
+  {
+    src: Partner5,
+    alt: "파트너 KB국민카드",
+  },
+  {
+    src: Partner6,
+    alt: "파트너 Donghee",
+  },
+];
 
 const carList: Car[] = [
   {
@@ -253,6 +285,20 @@ export default function Home() {
           </li>
         </ul>
       </article>
+      <ul className="flex flex-wrap justify-center gap-x-[clamp(4rem,10vw,8rem)] lg:gap-y-4 gap-y-8 mx-auto px-4 border-t-2 border-primary pt-8 pb-16">
+        {partners.map((partner, index) => (
+          <li key={index}>
+            <Image
+              src={partner.src}
+              alt={partner.alt}
+              width={120}
+              height={100}
+              placeholder="blur"
+              quality={100}
+            />
+          </li>
+        ))}
+      </ul>
     </main>
   );
 }

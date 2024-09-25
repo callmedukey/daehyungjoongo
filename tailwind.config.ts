@@ -13,6 +13,14 @@ const config: Config = {
 			"8xl": "90rem"
 		},
   		colors: {
+			footerColor: {
+				DEFAULT: 'hsl(var(--footer-color))',
+				foreground: 'hsl(var(--footer-color-foreground))'
+			},
+			footerText: {
+				DEFAULT: 'hsl(var(--footer-text))',
+				foreground: 'hsl(var(--footer-text-foreground))'
+			},
   			primary: {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'

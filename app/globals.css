@@ -20,7 +20,8 @@
     --primary-form-text: 0, 0%, 27%;
     --primary-text: 224, 99%, 28%;
     --custom-secondary: 32 98% 51%;
-
+    --footer-color: 0, 0%, 32%;
+    --footer-text: 0, 0%, 70%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 96.1%;
@@ -106,5 +107,7 @@
   .section-top-padding {
     @apply pt-[clamp(16px,10dvh,120px)];
   }
+
+  
 
 }
