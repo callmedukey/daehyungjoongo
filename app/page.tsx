@@ -11,12 +11,7 @@ import SecondShip from "@/public/img/second-ship.jpeg";
 import VectorShip from "@/public/img/vector-ship.svg";
 import Phone from "@/public/img/phone.svg";
 import Office from "@/public/img/office.svg";
-import Partner1 from "@/public/img/partner-1.png";
-import Partner2 from "@/public/img/partner-2.png";
-import Partner3 from "@/public/img/partner-3.png";
-import Partner4 from "@/public/img/partner-4.png";
-import Partner5 from "@/public/img/partner-5.png";
-import Partner6 from "@/public/img/partner-6.png";
+
 import Step1 from "@/public/img/stage-1.jpeg";
 import Step2 from "@/public/img/stage-2.jpeg";
 import Step3 from "@/public/img/stage-3.png";
@@ -27,33 +22,7 @@ import Step6 from "@/public/img/stage-6.png";
 import Link from "next/link";
 import NonCarouselCarList from "@/components/NonCarouselCarList";
 import CarouselCarList from "@/components/CarouselCarList";
-
-const partners = [
-  {
-    src: Partner1,
-    alt: "파트너 하나캐피털",
-  },
-  {
-    src: Partner2,
-    alt: "파트너 우리은행",
-  },
-  {
-    src: Partner3,
-    alt: "파트너 DB손해보험",
-  },
-  {
-    src: Partner4,
-    alt: "파트너 신한은행",
-  },
-  {
-    src: Partner5,
-    alt: "파트너 KB국민카드",
-  },
-  {
-    src: Partner6,
-    alt: "파트너 Donghee",
-  },
-];
+import { PartnerCarousel } from "@/components/partners/PartnerCarousel";
 
 const carList: Car[] = [
   {
@@ -200,7 +169,7 @@ export default function Home() {
         <h4 className="text-center text-primary thirty font-bold">
           중고 차 수출 판매 절차
         </h4>
-        <ul className="flex flex-wrap lg:gap-12 gap-4 sm:gap-8 max-w-4xl mx-auto w-full px-4">
+        <ul className="flex flex-wrap lg:gap-12 gap-4 sm:gap-8 max-w-4xl mx-auto w-full px-4 mt-[clamp(100px,10vw,180px)]">
           {stages.map((stage, index) => (
             <li
               key={index}
@@ -287,18 +256,7 @@ export default function Home() {
         </ul>
       </article>
       <ul className="flex flex-wrap justify-center gap-x-[clamp(4rem,10vw,8rem)] lg:gap-y-4 gap-y-8 mx-auto px-4 border-t-2 border-primary pt-8 pb-16">
-        {partners.map((partner, index) => (
-          <li key={index}>
-            <Image
-              src={partner.src}
-              alt={partner.alt}
-              width={120}
-              height={100}
-              placeholder="blur"
-              quality={100}
-            />
-          </li>
-        ))}
+        <PartnerCarousel speed="normal" />
       </ul>
     </main>
   );

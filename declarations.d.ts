@@ -12,3 +12,4 @@ declare interface Stages {
     title: string;
 }
 declare module '@splidejs/react-splide';
+declare module 'ua-parser-js';

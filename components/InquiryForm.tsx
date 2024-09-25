@@ -1,5 +1,5 @@
 "use client";
-
+import UAParser from "ua-parser-js";
 import Image from "next/image";
 import { Input } from "./ui/input";
 import {
@@ -40,6 +40,8 @@ const InquiryForm = () => {
   });
   const onSubmit = (data: z.infer<typeof formSchema>) => {};
 
+  const uap = new UAParser();
+  console.log(uap.getDevice());
   return (
     <Form {...form}>
       <form
