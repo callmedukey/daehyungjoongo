@@ -24,6 +24,10 @@ import Step4 from "@/public/img/stage-4.jpeg";
 import Step5 from "@/public/img/stage-5.jpeg";
 import Step6 from "@/public/img/stage-6.png";
 
+import Link from "next/link";
+import NonCarouselCarList from "@/components/NonCarouselCarList";
+import CarouselCarList from "@/components/CarouselCarList";
+
 const partners = [
   {
     src: Partner1,
@@ -113,9 +117,6 @@ const stages: Stages[] = [
   },
 ];
 
-import Link from "next/link";
-import NonCarouselCarList from "@/components/NonCarouselCarList";
-import CarouselCarList from "@/components/CarouselCarList";
 export default function Home() {
   return (
     <main className="text-primaryText">

@@ -108,6 +108,12 @@
     @apply pt-[clamp(16px,10dvh,120px)];
   }
 
-  
+  .about-max-width {
+    @apply max-w-[40rem] mx-auto;
+  }
 
+  .background-gradient {  
+    background: linear-gradient(144deg, rgba(252, 138, 7, 0.80) 14.82%, #fff 92%);
+  }
+  
 }
