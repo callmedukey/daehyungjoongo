@@ -47,6 +47,7 @@ export const PartnerCarousel = ({
   useEffect(() => {
     addAnimation();
   }, []);
+  
   const [start, setStart] = useState(false);
 
   function addAnimation() {
@@ -108,7 +109,14 @@ export const PartnerCarousel = ({
         )}
       >
         {items.map((item, idx) => (
-          <Image src={item} alt="partner" key={idx} />
+          <Image
+            src={item}
+            alt="partner"
+            key={idx}
+            quality={100}
+            width={100}
+            priority
+          />
         ))}
       </ul>
     </div>

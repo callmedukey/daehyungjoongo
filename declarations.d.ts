@@ -7,6 +7,10 @@ declare interface Car {
     src: StaticImageData;
 }
 
+declare interface Global {
+    nextConsultant: number | null;
+}
+
 declare interface Stages {
     src: StaticImageData;
     title: string;

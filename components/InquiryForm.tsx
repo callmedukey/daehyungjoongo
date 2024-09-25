@@ -5,7 +5,6 @@ import { Input } from "./ui/input";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -16,20 +15,12 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-
-const formSchema = z.object({
-  car: z.string().min(1, { message: "차량명을 입력해 주세요" }).trim(),
-  phone: z
-    .string()
-    .length(13, { message: "올바른 전화번호를 입력해 주세요" })
-    .trim()
-    .regex(/^[0-9\-]+$/, {
-      message: "올바른 전화번호를 입력해 주세요",
-    }),
-  agreement: z.boolean(),
-});
+import formSchema from "@/description/zod";
+import { submitInquiry } from "@/actions/submit";
+import { useState } from "react";
 
 const InquiryForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -38,10 +29,25 @@ const InquiryForm = () => {
       agreement: true,
     },
   });
-  const onSubmit = (data: z.infer<typeof formSchema>) => {};
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    if (isLoading) {
+      return;
+    }
+    setIsLoading(true);
+    if (!data.agreement) {
+      return alert("개인 정보 수집/이용 동의를 해야 합니다.");
+    }
+    const result = await submitInquiry(data);
+
+    if (result.message) {
+      alert(result.message);
+      form.reset();
+      setIsLoading(false);
+    }
+  };
 
   const uap = new UAParser();
-  console.log(uap.getDevice());
+
   return (
     <Form {...form}>
       <form
@@ -119,6 +125,7 @@ const InquiryForm = () => {
         />
         <Button
           type="submit"
+          disabled={isLoading}
           className="!twenty flex items-center mx-auto py-3 xl:pr-8 h-full leading-relaxed xl:leading-none flex-wrap whitespace-pre-line relative hover:-translate-y-2 transition-all duration-300 gap-2"
         >
           30초만에 내차 최고가 시세 조회 Click

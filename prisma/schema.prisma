@@ -14,7 +14,7 @@ model Consultation {
   ipAddress    String?
   device       String?
   consultant   Consultant? @relation(fields: [consultantId], references: [id])
-  consultantId String?
+  consultantId Int?
   createdAt    DateTime    @default(now())
 }
 
@@ -25,7 +25,7 @@ model Admin {
 }
 
 model Consultant {
-  id            String         @id @default(cuid())
+  id            Int            @id @default(autoincrement())
   name          String
   phoneNumber   String
   consultations Consultation[]
