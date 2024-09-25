@@ -2,6 +2,7 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 import Logo from "@/public/img/daehan-logo.png";
 import Image from "next/image";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   return (
@@ -21,6 +22,7 @@ const Header = () => {
         <NavLink href="/about">회사 소개</NavLink>
         <NavLink href="/export">중고차 직수출</NavLink>
       </nav>
+      <MobileMenu />
     </header>
   );
 };
