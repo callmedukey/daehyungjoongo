@@ -9,11 +9,7 @@ import AdminPasswordForm from "@/components/admin/AdminPasswordForm";
 
 export const dynamic = "force-dynamic";
 
-const AdminPage = async ({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) => {
+const AdminPage = async () => {
   const session = await verifySession();
   if (!session?.isAuth) {
     redirect("/login");

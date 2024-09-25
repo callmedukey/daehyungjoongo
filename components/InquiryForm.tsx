@@ -1,5 +1,4 @@
 "use client";
-import UAParser from "ua-parser-js";
 import Image from "next/image";
 import { Input } from "./ui/input";
 import {
@@ -45,8 +44,6 @@ const InquiryForm = () => {
       setIsLoading(false);
     }
   };
-
-  const uap = new UAParser();
 
   return (
     <Form {...form}>

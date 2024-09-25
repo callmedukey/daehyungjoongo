@@ -13,7 +13,6 @@ import { format } from "date-fns";
 import { Button } from "../ui/button";
 import { deleteInquiry } from "@/actions/deleteInquiry";
 import { useState } from "react";
-import { deleteConsultant } from "@/actions/consultants";
 import ConsultantEditDialog from "./ConsultantEditDialog";
 import AddConsultantDialog from "./AddConsultantDialog";
 
@@ -69,17 +68,9 @@ const ConsultantTable = ({ consultants }: { consultants: Consultant[] }) => {
               <TableCell className="">
                 <ConsultantEditDialog consultant={consultant} />
                 <Button
-                  onClick={() => {
-                    if (isLoading) {
-                      return;
-                    }
-                    if (!confirm("정말로 삭제하시겠습니까?")) {
-                      return;
-                    }
-                    setIsLoading(true);
-                    deleteConsultant(consultant.id);
-                    setIsLoading(false);
-                  }}
+                  disabled={isLoading}
+                  type="button"
+                  onClick={() => handleDelete(consultant.id)}
                   variant="ghost"
                   className="m-0"
                 >

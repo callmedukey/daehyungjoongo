@@ -1,6 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 import Partner1 from "@/public/img/partners/img_partner1.gif";
 import Partner2 from "@/public/img/partners/img_partner2.gif";
 import Partner3 from "@/public/img/partners/img_partner3.gif";
@@ -47,7 +46,7 @@ export const PartnerCarousel = ({
   useEffect(() => {
     addAnimation();
   }, []);
-  
+
   const [start, setStart] = useState(false);
 
   function addAnimation() {

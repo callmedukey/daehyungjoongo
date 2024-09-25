@@ -27,12 +27,18 @@ const AdminPasswordForm = () => {
   });
 
   const onSubmit = async (data: z.infer<typeof adminPasswordSchema>) => {
+    if (isLoading) return;
+    if (data.password !== data.confirmPassword) {
+      alert("암호가 일치하지 않습니다.");
+      return;
+    }
+
     setIsLoading(true);
     const response = await changePassword(data);
-    setIsLoading(false);
     if (response.message) {
       alert(response.message);
     }
+    setIsLoading(false);
   };
 
   return (

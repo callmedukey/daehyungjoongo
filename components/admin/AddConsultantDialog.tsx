@@ -1,6 +1,6 @@
 "use client";
 
-import { addConsultant, updateConsultant } from "@/actions/consultants";
+import { addConsultant } from "@/actions/consultants";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/dialog";
 import { consultantSchema } from "@/description/zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { type Consultant } from "@prisma/client";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
