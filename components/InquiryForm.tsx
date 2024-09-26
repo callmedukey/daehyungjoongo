@@ -118,11 +118,7 @@ const InquiryForm = () => {
               <FormLabel className="text-base -translate-y-0.5">
                 개인 정보 수집/이용 동의
               </FormLabel>
-              <Link
-                href="/agreement"
-                target="_blank"
-                className="-translate-y-0.5"
-              >
+              <Link href="/terms" target="_blank" className="-translate-y-0.5">
                 내용보기
               </Link>
             </FormItem>
