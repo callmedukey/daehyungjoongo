@@ -77,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="kr">
+    <html lang="ko">
       <body
         className={`${gmarketSans.variable} isolate antialiased font-gmarketSans leading-normal break-keep font-medium`}
       >
