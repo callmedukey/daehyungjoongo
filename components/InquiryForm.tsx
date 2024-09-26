@@ -17,6 +17,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import formSchema from "@/description/zod";
 import { submitInquiry } from "@/actions/submit";
 import { useState } from "react";
+import Link from "next/link";
 
 const InquiryForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -117,6 +118,13 @@ const InquiryForm = () => {
               <FormLabel className="text-base -translate-y-0.5">
                 개인 정보 수집/이용 동의
               </FormLabel>
+              <Link
+                href="/agreement"
+                target="_blank"
+                className="-translate-y-0.5"
+              >
+                내용보기
+              </Link>
             </FormItem>
           )}
         />
