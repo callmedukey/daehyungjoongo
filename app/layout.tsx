@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Script from "next/script";
 
 const gmarketSans = localFont({
   src: [
@@ -84,6 +85,19 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Script
+          id="smlog-script"
+          dangerouslySetInnerHTML={{
+            __html: `var hpt_info={'_account':'UHPT-29091', '_server': 'a28'};`,
+          }}
+        ></Script>
+        <noscript>
+          <img
+            src="//a28.smlog.co.kr/smart_bda.php?_account=29091"
+            style={{ display: "none", width: 0, height: 0 }}
+          />
+        </noscript>
+        <Script src="//cdn.smlog.co.kr/core/smart.js" />
       </body>
     </html>
   );
