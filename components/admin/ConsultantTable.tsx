@@ -33,9 +33,9 @@ const ConsultantTable = ({ consultants }: { consultants: Consultant[] }) => {
     setIsLoading(true);
     const { success } = await deleteConsultant(id);
     if (success) {
-      alert("상담 신청이 삭제되었습니다.");
+      alert("상담원이 삭제되었습니다.");
     } else {
-      alert("상담 신청 삭제에 실패했습니다.");
+      alert("상담원 삭제에 실패했습니다.");
     }
     setIsLoading(false);
   };
