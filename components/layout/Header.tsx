@@ -7,7 +7,7 @@ import MobileMenu from "./MobileMenu";
 const Header = () => {
   return (
     <header className="sticky top-0 flex text-primary py-8 px-2 lg:justify-center justify-end font-medium z-50 bg-white">
-      <Link href="/" className="absolute left-4 top-0 bottom-0 self-center">
+      <Link href="/" className="sm:absolute left-4 top-0 bottom-0 self-center">
         <Image
           src={Logo}
           alt="로고"

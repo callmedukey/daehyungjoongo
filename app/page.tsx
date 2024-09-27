@@ -211,48 +211,54 @@ export default function Home() {
           sizes="100vw"
         />
         <ul className="flex justify-center flex-wrap gap-12 px-4">
-          <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem]">
-            <div className="absolute -left-8 -bottom-6 size-[8rem] bg-[#01258C] opacity-10 z-10 rounded-full blur-sm" />
-            <Image
-              src={Phone}
-              alt="전화기"
-              width={80}
-              height={80}
-              className="self-start -translate-y-2"
-            />
-            <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
-              <span className="text-customSecondary">대한중고차수출</span>
-              <span className="sm:twenty">문의하기</span>
-            </p>
-          </li>
-          <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem]">
-            <div className="absolute -left-8 -bottom-6 size-[8rem] bg-[#01258C] opacity-10 z-10 rounded-full blur-sm" />
-            <Image
-              src={VectorShip}
-              alt="백터 화물선"
-              width={90}
-              height={90}
-              className="self-start -translate-y-2"
-            />
-            <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
-              <span className="text-customSecondary">대한중고차수출</span>
-              <span className="sm:twenty">중고차 직수출</span>
-            </p>
-          </li>
-          <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem]">
-            <div className="absolute -left-8 -bottom-6 size-[8rem] bg-[#01258C] opacity-10 z-10 rounded-full blur-sm" />
-            <Image
-              src={Office}
-              alt="사무실"
-              width={80}
-              height={80}
-              className="self-start -translate-y-2"
-            />
-            <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
-              <span className="text-customSecondary">대한중고차수출</span>
-              <span className="sm:twenty">소개</span>
-            </p>
-          </li>
+          <Link href="/#inquiry-form">
+            <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem]">
+              <div className="absolute -left-8 -bottom-6 size-[8rem] bg-[#01258C] opacity-10 z-10 rounded-full blur-sm" />
+              <Image
+                src={Phone}
+                alt="전화기"
+                width={80}
+                height={80}
+                className="self-start -translate-y-2"
+              />
+              <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
+                <span className="text-customSecondary">대한중고차수출</span>
+                <span className="sm:twenty">문의하기</span>
+              </p>
+            </li>
+          </Link>
+          <Link href="/export">
+            <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem]">
+              <div className="absolute -left-8 -bottom-6 size-[8rem] bg-[#01258C] opacity-10 z-10 rounded-full blur-sm" />
+              <Image
+                src={VectorShip}
+                alt="백터 화물선"
+                width={90}
+                height={90}
+                className="self-start -translate-y-2"
+              />
+              <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
+                <span className="text-customSecondary">대한중고차수출</span>
+                <span className="sm:twenty">중고차 직수출</span>
+              </p>
+            </li>
+          </Link>
+          <Link href="/about">
+            <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem]">
+              <div className="absolute -left-8 -bottom-6 size-[8rem] bg-[#01258C] opacity-10 z-10 rounded-full blur-sm" />
+              <Image
+                src={Office}
+                alt="사무실"
+                width={80}
+                height={80}
+                className="self-start -translate-y-2"
+              />
+              <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
+                <span className="text-customSecondary">대한중고차수출</span>
+                <span className="sm:twenty">소개</span>
+              </p>
+            </li>
+          </Link>
         </ul>
       </article>
       <article className="flex flex-wrap justify-center gap-x-[clamp(4rem,10vw,8rem)] lg:gap-y-4 gap-y-8 mx-auto px-4 border-t-2 border-primary pt-8 pb-16">

@@ -53,11 +53,11 @@ const AboutPage = () => {
           시장에서 선도적인 위치를 차지하기 위해 끊임없는 노력을 하고 있습니다.
         </p>
         <div className="flex sm:gap-24 justify-center h-[25rem] my-16 flex-col sm:flex-row">
-          <div className="size-60 aspect-square basis-[15rem] background-gradient rounded-full flex items-center justify-center flex-col">
+          <div className="aspect-square basis-[15rem] background-gradient rounded-full flex items-center justify-center flex-col self-start">
             <span className="twenty text-primaryFormText">거래 국가</span>
             <span className="text-[3rem] font-bold text-primary">+ 28</span>
           </div>
-          <div className="size-60 basis-[15rem] aspect-square background-gradient rounded-full self-end flex items-center justify-center flex-col">
+          <div className="basis-[15rem] aspect-square background-gradient rounded-full self-end flex items-center justify-center flex-col">
             <span className="twenty text-primaryFormText">연간 수출 대수</span>
             <span className="text-[3rem] font-bold text-primary">+ 2568</span>
           </div>
