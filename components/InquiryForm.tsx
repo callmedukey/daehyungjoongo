@@ -127,7 +127,7 @@ const InquiryForm = () => {
         <Button
           type="submit"
           disabled={isLoading}
-          className="!twenty flex items-center mx-auto py-3 xl:pr-8 h-full leading-relaxed xl:leading-none flex-wrap whitespace-pre-line relative hover:-translate-y-2 transition-all duration-300 gap-2"
+          className="sm:twenty text-sm flex items-center mx-auto py-3 xl:pr-8 h-full leading-relaxed xl:leading-none flex-wrap whitespace-pre-line relative hover:-translate-y-2 transition-all duration-300 gap-2"
         >
           30초만에 내차 최고가 시세 조회 Click
           <Image

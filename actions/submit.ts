@@ -1,4 +1,4 @@
-'use server'
+"use server";
 
 import prisma from "@/lib/prisma";
 import { z } from "zod";
@@ -7,16 +7,14 @@ import { headers } from "next/headers";
 import UAParser from "ua-parser-js";
 import { SolapiMessageService } from "solapi";
 import { revalidatePath } from "next/cache";
-
+import type { Consultant } from "@prisma/client";
 
 export async function submitInquiry(formData: z.infer<typeof formSchema>) {
-
   try {
     const validated = formSchema.safeParse(formData);
     if (!validated.success) {
       return { message: "잘못된 입력입니다." };
     }
-
 
     const headersList = headers();
     const ipAddress = headersList.get("x-forwarded-for")?.split(",")[0];
@@ -25,10 +23,11 @@ export async function submitInquiry(formData: z.infer<typeof formSchema>) {
       throw new Error("IP address not found.");
     }
 
-    const rawDevice = UAParser(headersList.get("user-agent"))?.device
+    const rawDevice = UAParser(headersList.get("user-agent"))?.device;
 
-    const isDesktop = rawDevice.type === undefined || !['wearable', 'mobile'].includes(rawDevice.type);
-
+    const isDesktop =
+      rawDevice.type === undefined ||
+      !["wearable", "mobile"].includes(rawDevice.type);
 
     const { car, phone } = validated.data;
 
@@ -72,7 +71,9 @@ export async function submitInquiry(formData: z.infer<typeof formSchema>) {
       process.env.SOLAPI_API_SECRET as string
     );
     await solapi.sendOne({
-      to: consultants.find(consultant => consultant.id === nextConsultantId)?.phoneNumber.replaceAll("-", "") as string,
+      to: consultants
+        .find((consultant: Consultant) => consultant.id === nextConsultantId)
+        ?.phoneNumber.replaceAll("-", "") as string,
       from: process.env.SOLAPI_SENDER_PHONE_NUMBER as string,
       text: `
       차량: ${car}
@@ -82,14 +83,16 @@ export async function submitInquiry(formData: z.infer<typeof formSchema>) {
     });
 
     revalidatePath("/admin");
-    
+
     if (nextConsultantId >= lastConsultantId) {
       (global as any).nextConsultant = consultants[0].id;
     } else {
-      const index = consultants.findIndex(consultant => consultant.id === nextConsultantId);
+      const index = consultants.findIndex(
+        (consultant) => consultant.id === nextConsultantId
+      );
       (global as any).nextConsultant = consultants[index + 1].id;
     }
-    
+
     return { message: "문의 접수가 완료되었습니다." };
   } catch (error) {
     console.error(error);

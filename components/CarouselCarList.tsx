@@ -19,7 +19,7 @@ const CarouselCarList = ({ carList }: { carList: Car[] }) => {
     mediaQuery: "min",
     gap: "16px",
     breakpoints: {
-      500: {
+      650: {
         perPage: 2,
         perMove: 1,
       },

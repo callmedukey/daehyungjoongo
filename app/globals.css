@@ -42,6 +42,7 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
     --thirty: 1.875rem;
     --twenty: 1.25rem;
   }
@@ -78,7 +79,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-gmarketSans;
+    @apply bg-background text-foreground;
   }
 
   .active-nav::after {
@@ -95,10 +96,18 @@
 
   .thirty {
     font-size: var(--thirty);
+
+    @media (max-width: 768px) {
+      font-size: clamp(1.3rem, 6vw, var(--thirty));
+    }
   }
 
   .twenty {
     font-size: var(--twenty);
+
+    @media (max-width: 768px) {
+      font-size: clamp(1.1rem, 6vw, var(--twenty));
+    }
   }
 
   .text-shadow {
@@ -113,8 +122,11 @@
     @apply max-w-[40rem] mx-auto;
   }
 
-  .background-gradient {  
-    background: linear-gradient(144deg, rgba(252, 138, 7, 0.80) 14.82%, #fff 92%);
+  .background-gradient {
+    background: linear-gradient(
+      144deg,
+      rgba(252, 138, 7, 0.8) 14.82%,
+      #fff 92%
+    );
   }
-  
 }

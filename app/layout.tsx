@@ -5,25 +5,10 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Script from "next/script";
 
-const gmarketSans = localFont({
-  src: [
-    {
-      path: "./fonts/GmarketSansLight.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "./fonts/GmarketSansMedium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/GmarketSansBold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-gmarket-sans",
+const Pretendard = localFont({
+  src: "./fonts/PretendardVariable.woff2",
+  variable: "--font-pretendard",
+  weight: "100 900",
   display: "swap",
 });
 
@@ -80,12 +65,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${gmarketSans.variable} isolate antialiased font-gmarketSans leading-normal break-keep font-medium`}
+        className={`${Pretendard.variable} isolate antialiased font-pretendard leading-normal break-keep font-medium`}
       >
         <Header />
         {children}
         <Footer />
-        <Script
+        {/* <Script
           id="smlog-script"
           dangerouslySetInnerHTML={{
             __html: `var hpt_info={'_account':'UHPT-29091', '_server': 'a28'};`,
@@ -97,7 +82,7 @@ export default function RootLayout({
             style={{ display: "none", width: 0, height: 0 }}
           />
         </noscript>
-        <Script src="//cdn.smlog.co.kr/core/smart.js" />
+        <Script src="//cdn.smlog.co.kr/core/smart.js" /> */}
       </body>
     </html>
   );

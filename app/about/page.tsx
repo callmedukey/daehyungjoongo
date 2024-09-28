@@ -8,7 +8,7 @@ import InquiryForm from "@/components/InquiryForm";
 const AboutPage = () => {
   return (
     <main className="max-w-6xl mx-auto w-full px-4">
-      <article className="relative min-h-[min(80dvh,600px)] mt-12 flex flex-wrap isolate justify-center items-center gap-[clamp(2rem,10vw,12rem)] pt-12 text-center lg:text-left rounded-3xl overflow-clip">
+      <article className="relative min-h-[min(60dvh,400px)] mt-12 flex flex-wrap isolate justify-center items-center gap-[clamp(2rem,10vw,12rem)] pt-12 text-center lg:text-left rounded-3xl overflow-clip px-2">
         <div className="absolute inset-0 bg-white opacity-50 " />
         <Image
           src={AboutShip}
@@ -24,7 +24,7 @@ const AboutPage = () => {
           <h1 className="text-primary">중고차 직수출의 신뢰와 전문성!</h1>
           <p className="">
             대한중고차수출에서{" "}
-            <span className="text-customSecondary"> 믿을 수 있는</span> <br />
+            <span className="text-primary"> 믿을 수 있는</span> <br />
             중고차 거래의 새로운 기준을 만나보세요
           </p>
         </div>

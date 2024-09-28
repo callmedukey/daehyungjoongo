@@ -17,23 +17,23 @@ const CarItem = ({ car, isCarousel }: { car: Car; isCarousel: boolean }) => {
             className="object-cover object-center"
           />
         </div>
-        <div className="py-2 px-4">
+        <div className="py-2 px-4 basis-[8rem] flex-1">
           <section className="flex items-center justify-between">
             <span className="">{car.car}</span>
             <span className="bg-primary text-white px-0.5 py-1 rounded-md">
               <span className="translate-y-0.5 inline-block">{car.year}</span>
             </span>
           </section>
-          <section className="flex justify-between mt-6 text-customSecondary">
+          <section className="flex justify-between mt-6">
             <p>국내 매매상사</p>
             <p>{car.buy}</p>
           </section>
-          <section className="flex justify-between mt-6 text-customSecondary twenty">
+          <section className="flex justify-between mt-6 twenty font-bold">
             <p>중고차 수출</p>
             <p>{car.export}</p>
           </section>
         </div>
-        <div className="bg-primary text-white py-4 px-2 flex justify-center items-center twenty gap-2 mt-6">
+        <div className="bg-primary text-white py-4 px-2 flex justify-center items-center twenty gap-2 mt-6 font-bold flex-1">
           <p>{car.markup}</p>
           <Image
             src={UpArrow}
@@ -57,23 +57,23 @@ const CarItem = ({ car, isCarousel }: { car: Car; isCarousel: boolean }) => {
           className="object-cover object-center"
         />
       </div>
-      <div className="py-2 px-4">
+      <div className="py-2 px-4 basis-[10rem] flex-1">
         <section className="flex items-center justify-between">
           <span className="">{car.car}</span>
           <span className="bg-primary text-white px-0.5 py-1 rounded-md">
             <span className="translate-y-0.5 inline-block">{car.year}</span>
           </span>
         </section>
-        <section className="flex justify-between mt-6 text-customSecondary">
+        <section className="flex justify-between mt-6">
           <p>국내 매매상사</p>
           <p>{car.buy}</p>
         </section>
-        <section className="flex justify-between mt-6 text-customSecondary twenty">
+        <section className="flex justify-between mt-6 twenty font-bold">
           <p>중고차 수출</p>
           <p>{car.export}</p>
         </section>
       </div>
-      <div className="bg-primary text-white py-4 px-2 flex justify-center items-center twenty gap-2 mt-6">
+      <div className="bg-primary text-white py-4 px-2 flex justify-center items-center twenty gap-2 mt-6 flex-1 font-bold">
         <p>{car.markup}</p>
         <Image
           src={UpArrow}
