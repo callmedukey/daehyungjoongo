@@ -42,7 +42,7 @@ const AboutPage = () => {
         <div className="flex items-start flex-wrap flex-col xl:flex-row relative">
           <div className="flex-1 pt-12 xl:min-w-[38rem] mx-auto">
             <h2 className="flex flex-col gap-4 text-center xl:text-left">
-              <span className="twoTwoFive text-secondaryText">
+              <span className="twoTwoFive text-secondaryText font-bold md:font-medium">
                 중고차 직수출 업계의 Number 1
               </span>
               <span className="text-primary threeRem font-bold">
@@ -91,7 +91,7 @@ const AboutPage = () => {
             width={360}
           />
           <div className="flex flex-col gap-4 items-start flex-1 xl:text-left text-center leading-relaxed order-1 xl:order-2">
-            <h3 className="flex flex-col gap-2 items-center xl:items-start twoTwoFive text-secondaryText mx-auto xl:ml-0">
+            <h3 className="flex flex-col gap-2 items-center xl:items-start twoTwoFive text-secondaryText mx-auto xl:ml-0 font-bold md:font-medium">
               내 차를 파를 다른 방법은 없을까?
               <br />
               <span className="text-primary threeRem font-bold">
@@ -111,7 +111,7 @@ const AboutPage = () => {
         </div>
         <div className="flex flex-col gap-4 xl:flex-row max-w-7xl mx-auto mt-[clamp(2rem,8vw,6rem)] xl:mt-[clamp(6rem,12vw,11rem)]">
           <div>
-            <h4 className="flex flex-col gap-2 xl:items-start text-secondaryText twoTwoFive xl:text-left text-center leading-relaxed">
+            <h4 className="flex flex-col gap-2 xl:items-start text-secondaryText twoTwoFive xl:text-left text-center leading-relaxed font-bold md:font-medium">
               가장 높은 가격에 판매하는 방법!
               <br />
               <span className="text-primary threeRem font-bold">

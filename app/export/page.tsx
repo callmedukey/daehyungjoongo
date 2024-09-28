@@ -73,7 +73,7 @@ const ExportPage = () => {
             className="basis-[40%] shrink-[2] w-[40%] hidden lg:block"
           />
         </div>
-        <div className="flex justify-center mt-[clamp(4rem,20vw,12rem)] items-center isolate lg:flex-row flex-col gap-16 sm:gap-8 lg:gap-0 relative pt-12 lg:pt-0 mx-[-1rem]">
+        <div className="flex justify-center mt-[clamp(4rem,20vw,12rem)] items-center isolate lg:flex-row flex-col gap-8 lg:gap-0 relative pt-12 lg:pt-0 mx-[-1rem] px-4">
           <p className="shadow-xl border py-2 lg:p-4 bg-white z-10 max-w-[25rem] lg:min-w-[25rem] w-full rounded-lg lg:translate-x-60 xl:translate-x-40 2xl:translate-x-24 order-1">
             <span className="font-bold twenty text-primary">
               국내보다 높은 판매가

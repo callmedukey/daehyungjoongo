@@ -22,13 +22,15 @@ const Header = () => {
           quality={100}
         />
       </Link>
-      <Image
-        src={DarkPhone}
-        alt="모바일 폰"
-        width={60}
-        height={60}
-        className="size-8 md:hidden"
-      />
+      <a href="tel:050-8202-1309" className="size-8 md:hidden">
+        <Image
+          src={DarkPhone}
+          alt="모바일 폰"
+          width={60}
+          height={60}
+          className="size-8 md:hidden"
+        />
+      </a>
       <nav className="gap-[clamp(1rem,10vw,3.5rem)] hidden md:flex mr-0 ml-auto lg:mr-auto">
         <NavLink href="/">홈</NavLink>
         <NavLink href="/about">회사 소개</NavLink>
