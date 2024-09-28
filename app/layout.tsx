@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Script from "next/script";
+import FixedAside from "@/components/layout/FixedAside";
 
 const Pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -65,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${Pretendard.variable} isolate antialiased font-pretendard leading-normal break-keep font-medium`}
+        className={`${Pretendard.variable} isolate antialiased font-pretendard leading-normal break-keep font-medium text-secondaryText`}
       >
         <Header />
         {children}
@@ -83,6 +84,7 @@ export default function RootLayout({
           />
         </noscript>
         <Script src="//cdn.smlog.co.kr/core/smart.js" /> */}
+        <FixedAside />
       </body>
     </html>
   );

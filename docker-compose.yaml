@@ -8,6 +8,8 @@ services:
       - postgres
     networks:
       - app-network
+    environment:
+      - VIPS_NOVECTOR=1
 
   postgres:
     image: "postgres:16.3-alpine"
@@ -22,6 +24,7 @@ services:
       - ./data:/var/lib/postgresql/data
     networks:
       - app-network
+
 
 networks:
   app-network:

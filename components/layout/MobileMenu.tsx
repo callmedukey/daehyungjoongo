@@ -13,9 +13,9 @@ const MobileMenu = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <Drawer direction="right" open={open} onOpenChange={setOpen}>
+    <Drawer direction="left" open={open} onOpenChange={setOpen}>
       <DrawerTrigger
-        className="sm:hidden ml-auto mr-0 text-black focus:outline-none"
+        className="md:hidden text-black focus:outline-none"
         aria-label="모바일 메뉴"
       >
         <svg

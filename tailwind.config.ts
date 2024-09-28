@@ -54,6 +54,10 @@ const config: Config = {
           DEFAULT: "hsl(var(--primary-form-text))",
           foreground: "hsl(var(--primary-form-text-foreground))",
         },
+        secondaryText: {
+          DEFAULT: "hsl(var(--secondary-text))",
+          foreground: "hsl(var(--secondary-text-foreground))",
+        },
         primaryText: {
           DEFAULT: "hsl(var(--primary-text))",
           foreground: "hsl(var(--primary-text-foreground))",

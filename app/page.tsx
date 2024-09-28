@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Ship from "@/public/img/ship.jpeg";
+import PhoneScreen from "@/public/img/screen.png";
 import SalesMan from "@/public/img/salesman.png";
 import InquiryForm from "@/components/InquiryForm";
 import Morning from "@/public/img/carousel-cars/1.png";
@@ -10,13 +11,14 @@ import SecondShip from "@/public/img/second-ship.jpeg";
 import VectorShip from "@/public/img/vector-ship.svg";
 import Phone from "@/public/img/phone.svg";
 import Office from "@/public/img/office.svg";
-import Comparison from "@/public/img/comparison.png";
 import Step1 from "@/public/img/stage-1.jpeg";
 import Step2 from "@/public/img/stage-2.jpeg";
 import Step3 from "@/public/img/stage-3.png";
 import Step4 from "@/public/img/stage-4.jpeg";
 import Step5 from "@/public/img/stage-5.jpeg";
 import Step6 from "@/public/img/stage-6.png";
+import SecondBackground from "@/public/img/second-background.png";
+import Diagram from "@/public/img/diagram.png";
 
 import Link from "next/link";
 import NonCarouselCarList from "@/components/NonCarouselCarList";
@@ -100,11 +102,11 @@ export default function Home() {
         />
         <div className="flex justify-center xl:gap-12 h-full max-w-screen-8xl mx-auto xl:flex-row flex-col px-2 sm:px-0">
           <div className="flex flex-col section-top-padding relative flex-1 order-1 xl:order-2">
-            <h1 className="text-white font-bold thirty flex flex-col w-full">
-              <span className="text-primary self-center text-center xl:self-start">
+            <h1 className="text-white font-bold thirty flex flex-col w-full xl:gap-6">
+              <span className="text-primary self-center text-center xl:self-start threeRem">
                 투명한 가격과 프로세스로
               </span>
-              <span className="self-center text-center">
+              <span className="self-center text-center twoTwoFive">
                 신뢰할 수 있는 중고차 수출 술로션
               </span>
             </h1>
@@ -113,8 +115,8 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-white z-10 xl:m-12 mt-0 mx-auto mb-12 sm:px-6 px-4 py-12 flex-1 max-w-[40rem] rounded-2xl order-2 xl:order-1">
-            <h2 className="thirty text-primary text-center font-bold">
-              실시간 차량 수출 무료 상담
+            <h2 className="thirty text-center font-bold">
+              차량 수출 <span className="text-primary">최고가 견적</span>
             </h2>
             <p className="text-center text-shadow sm:twenty font-medium">
               연식, 주행거리, 사고 유무 상관없이 최고가 매입
@@ -123,47 +125,70 @@ export default function Home() {
           </div>
         </div>
       </article>
-      <article className="section-top-padding font-bold max-w-4xl mx-auto px-4 sm:px-0">
-        <h3 className="text-center thirty text-primary">
-          자동차 연식이 높아 걱정하시나요?
+      <article className="section-top-padding font-bold max-w-7xl mx-auto px-4 isolate">
+        <h3 className="text-center threeRem">
+          자동차 연식이 높아{" "}
+          <span className="text-primary underline underline-offset-8">
+            걱정하시나요?
+          </span>
         </h3>
-        <p className="text-center twenty mt-[clamp(30px,10dvh,40px)]">
+        <p className="text-center twoTwoFive mt-[clamp(10px,10dvh,20px)]">
           팔지는 못 하고 폐차 하기 아까우시면 수출!
         </p>
-        <p className="text-center mt-[clamp(60px,10dvh,100px)] thirty">
-          폐차 대비 <span className="text-customSecondary">50~300만원</span> 더
-          높은 가격에 내차 팔기!
-        </p>
-        <section className="relative flex justify-center lg:gap-4 xl:gap-8 sm:gap-2 font-medium mt-[clamp(50px,10dvh,90px)] max-w-sm mx-auto lg:max-w-full">
+        <div className="relative rounded-2xl overflow-clip mx-auto mt-[clamp(60px,10dvh,100px)] py-8 isolate">
+          <p className="text-center thirty z-10 relative text-white leading-8">
+            폐차 대비 50~300만원 <br className="sm:hidden" />
+            <span className="text-primary">더 높은 가격에</span> 내차 팔기!
+          </p>
+          <div className="absolute inset-0 bg-black/50 -z-10" />
           <Image
-            src={Comparison}
-            alt="상승을 보이는 그래프"
-            height={1987}
-            width={2024}
-            quality={100}
-            className="flex-1 w-[clamp(200px,100%,350px)]"
+            src={SecondBackground}
+            alt="두번째 배경"
+            fill
+            className="object-cover object-center md:object-left flex-1 -z-20"
           />
-        </section>
-        <Link
-          href="/#inquiry-form"
-          className="font-medium twenty text-white block w-fit bg-primary py-2 px-4 mx-auto rounded-xl mt-[clamp(30px,10dvh,40px)]"
-        >
-          <span className="inline-block">지금 바로 상담 받기</span>
-        </Link>
+          <div className="flex justify-center items-center mt-8 px-4">
+            <Image
+              src={Diagram}
+              alt="상승을 보이는 그래프"
+              height={347}
+              width={451}
+              quality={100}
+              className="w-[clamp(200px,100%,450px)] lg:ml-12 lg:mr-auto"
+            />
+            <Image
+              src={PhoneScreen}
+              width={1193}
+              height={2220}
+              alt="24시간 이내 신속한 입금, 부담 감가 없이 내가 원하는 가격"
+              className="h-[550px] w-[300px] ml-auto mr-12 hidden lg:block"
+              quality={100}
+            />
+          </div>
+          <Link
+            href="/#inquiry-form"
+            className="font-medium lg:absolute twenty text-white block w-fit bg-primary py-2 px-4 mx-auto rounded-xl mt-[clamp(30px,10dvh,60px)] z-30 bottom-6 left-1/2 lg:-translate-x-1/2"
+          >
+            <span className="inline-block">지금 바로 상담 받기</span>
+          </Link>
+        </div>
       </article>
-      <article className="my-[clamp(100px,10vw,180px)] max-w-screen-8xl mx-auto">
+      <article className="mt-[clamp(100px,10vw,180px)] max-w-screen-8xl mx-auto">
         <NonCarouselCarList carList={carList} />
         <CarouselCarList carList={carList} />
       </article>
-      <article>
-        <h4 className="text-center text-primary thirty font-bold">
-          중고차 수출 판매 절차
+      <article className="relative isolate">
+        <h4 className="text-center threeRem font-bold my-[clamp(60px,10vw,100px)]">
+          중고차 수출{" "}
+          <span className="text-primary underline underline-offset-8">
+            판매 절차
+          </span>
         </h4>
-        <ul className="grid grid-cols-2 lg:gap-12 gap-y-4 gap-x-0 sm:gap-8 max-w-4xl mx-auto w-full px-4 mt-[clamp(100px,10vw,180px)]">
+        <ul className="grid grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-y-4 gap-x-0 sm:gap-8 max-w-4xl mx-auto w-full px-4">
           {stages.map((stage, index) => (
             <li
               key={index}
-              className="flex-1 flex flex-col basis-[15rem] overflow-clip rounded-md relative shadow-lg isolate"
+              className="flex-1 flex flex-col basis-[15rem] overflow-clip rounded-md relative shadow-lg isolate bg-white"
             >
               <span className="bg-primary sm:p-2 py-1 px-2 rounded-md absolute z-10 text-xs sm:text-sm md:text-base">
                 <span className="inline-block text-white">
@@ -187,6 +212,7 @@ export default function Home() {
             </li>
           ))}
         </ul>
+        <div className="absolute lg:block hidden bottom-[-40px] bg-primary opacity-50 w-full h-[clamp(160px,15vw,180px)] max-h-[200px] -z-10" />
       </article>
       <article className="my-[clamp(100px,10vw,180px)] relative py-16 isolate">
         <div className="absolute inset-0 bg-black/50" />
@@ -199,7 +225,7 @@ export default function Home() {
         />
         <ul className="flex justify-center flex-wrap gap-12 px-4">
           <Link href="/#inquiry-form">
-            <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem]">
+            <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem] flex-1 max-w-[20rem]">
               <div className="absolute -left-8 -bottom-6 size-[8rem] bg-[#01258C] opacity-10 z-10 rounded-full blur-sm" />
               <Image
                 src={Phone}
@@ -215,14 +241,14 @@ export default function Home() {
             </li>
           </Link>
           <Link href="/export">
-            <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem]">
+            <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem] flex-1 max-w-[20rem]">
               <div className="absolute -left-8 -bottom-6 size-[8rem] bg-[#01258C] opacity-10 z-10 rounded-full blur-sm" />
               <Image
                 src={VectorShip}
                 alt="백터 화물선"
-                width={90}
-                height={90}
-                className="self-start -translate-y-2"
+                width={80}
+                height={80}
+                className="self-start -translate-y-2 scale-110"
               />
               <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
                 <span className="">대한중고차수출</span>
@@ -231,7 +257,7 @@ export default function Home() {
             </li>
           </Link>
           <Link href="/about">
-            <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem]">
+            <li className="flex bg-white isolate relative py-6 pl-6 pr-10 rounded-xl h-[8rem] gap-6 basis-[20rem] flex-1 max-w-[20rem]">
               <div className="absolute -left-8 -bottom-6 size-[8rem] bg-[#01258C] opacity-10 z-10 rounded-full blur-sm" />
               <Image
                 src={Office}

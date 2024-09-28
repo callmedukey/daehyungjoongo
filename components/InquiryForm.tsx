@@ -58,8 +58,8 @@ const InquiryForm = () => {
           name="car"
           render={({ field }) => (
             <FormItem className="flex items-center gap-8">
-              <FormLabel className="h-full font-medium !twenty">
-                차량명
+              <FormLabel className="h-full font-medium !twenty min-w-[3rem]">
+                차량
               </FormLabel>
               <FormControl>
                 <Input
@@ -77,8 +77,8 @@ const InquiryForm = () => {
           name="phone"
           render={({ field }) => (
             <FormItem className="flex items-center gap-8">
-              <FormLabel className="h-full font-medium !twenty">
-                핸드폰
+              <FormLabel className="h-full font-medium !twenty min-w-[3rem]">
+                연락처
               </FormLabel>
               <FormControl>
                 <Input
@@ -116,7 +116,7 @@ const InquiryForm = () => {
                 />
               </FormControl>
               <FormLabel className="text-base -translate-y-0.5">
-                개인 정보 수집/이용 동의
+                개인정보 수집/이용 동의
               </FormLabel>
               <Link href="/terms" target="_blank" className="-translate-y-0.5">
                 내용보기
@@ -127,12 +127,12 @@ const InquiryForm = () => {
         <Button
           type="submit"
           disabled={isLoading}
-          className="sm:twenty text-sm flex items-center mx-auto py-3 xl:pr-8 h-full leading-relaxed xl:leading-none flex-wrap whitespace-pre-line relative hover:-translate-y-2 transition-all duration-300 gap-2"
+          className="sm:twenty text-sm flex items-center mx-auto py-3 xl:pr-8 h-full leading-relaxed xl:leading-none flex-wrap whitespace-pre-line relative hover:-translate-y-2 transition-all duration-300"
         >
           30초만에 내차 최고가 시세 조회 Click
           <Image
             src="/img/click.svg"
-            className="bg-transparent float-right xl:absolute size-6 right-2 -translate-y-0.5"
+            className="bg-transparent float-right xl:absolute size-6 right-2 "
             alt="클릭"
             width={24}
             height={24}

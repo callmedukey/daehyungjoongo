@@ -19,6 +19,7 @@
     --primary: 0 83% 50%;
     --primary-form-text: 0, 0%, 27%;
     --primary-text: 224, 99%, 28%;
+    --secondary-text: 0, 0%, 18%;
     --custom-secondary: 32 98% 51%;
     --footer-color: 0, 0%, 32%;
     --footer-text: 0, 0%, 70%;
@@ -44,6 +45,8 @@
     --radius: 0.5rem;
 
     --thirty: 1.875rem;
+    --threeRem: 3rem;
+    --twoTwoFive: 2.25rem;
     --twenty: 1.25rem;
   }
   .dark {
@@ -102,6 +105,22 @@
     }
   }
 
+  .threeRem {
+    font-size: var(--threeRem);
+
+    @media (max-width: 768px) {
+      font-size: clamp(1.6rem, 6vw, var(--threeRem));
+    }
+  }
+
+  .twoTwoFive {
+    font-size: var(--twoTwoFive);
+
+    @media (max-width: 768px) {
+      font-size: clamp(1.4rem, 5vw, var(--twoTwoFive));
+    }
+  }
+
   .twenty {
     font-size: var(--twenty);
 
@@ -119,7 +138,7 @@
   }
 
   .about-max-width {
-    @apply max-w-[40rem] mx-auto;
+    @apply max-w-7xl mx-auto;
   }
 
   .background-gradient {
