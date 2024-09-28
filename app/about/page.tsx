@@ -138,7 +138,7 @@ const AboutPage = () => {
           <Image
             src={Car2}
             alt="중고차"
-            className="mx-auto flex-1 shrink-0 xl:scale-[60%] self-center order-2 xl:order-1 my-[clamp(6rem,12vw,11rem)] xl:my-0"
+            className="mx-auto flex-1 shrink-0 xl:scale-[80%] self-center order-2 xl:order-1 my-[clamp(6rem,12vw,11rem)] xl:my-0"
             width={360}
           />
         </div>
