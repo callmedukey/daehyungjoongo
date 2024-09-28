@@ -17,8 +17,17 @@ const AdminPage = async () => {
   }
 
   const nextConsultant = (global as any)?.nextConsultant;
+
   if (!nextConsultant) {
-    (global as any).nextConsultant = 1;
+    const consultants = await prisma.consultant.findMany({
+      where: {
+        active: true,
+      },
+      orderBy: {
+        id: "asc",
+      },
+    });
+    (global as any).nextConsultant = consultants[0].id || 1;
   }
 
   const inquiries = await prisma.consultation.findMany({

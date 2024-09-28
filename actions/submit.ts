@@ -45,11 +45,12 @@ export async function submitInquiry(formData: z.infer<typeof formSchema>) {
     }
 
     const lastConsultantId = consultants[consultants.length - 1].id;
+    const firstConsultantId = consultants[0].id;
 
     const nextConsultantId = (global as any)?.nextConsultant;
 
     if (!nextConsultantId) {
-      (global as any).nextConsultant = consultants[0].id;
+      (global as any).nextConsultant = firstConsultantId;
     }
 
     const consultation = await prisma.consultation.create({
@@ -85,7 +86,7 @@ export async function submitInquiry(formData: z.infer<typeof formSchema>) {
     revalidatePath("/admin");
 
     if (nextConsultantId >= lastConsultantId) {
-      (global as any).nextConsultant = consultants[0].id;
+      (global as any).nextConsultant = firstConsultantId;
     } else {
       const index = consultants.findIndex(
         (consultant) => consultant.id === nextConsultantId
