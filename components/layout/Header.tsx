@@ -19,6 +19,7 @@ const Header = () => {
           width={250}
           className=""
           priority
+          loading="eager"
           quality={100}
         />
       </Link>
@@ -29,6 +30,9 @@ const Header = () => {
           width={60}
           height={60}
           className="size-8 md:hidden"
+          priority
+          quality={100}
+          loading="eager"
         />
       </a>
       <nav className="gap-[clamp(1rem,10vw,3.5rem)] hidden md:flex mr-0 ml-auto lg:mr-auto">
