@@ -5,7 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Script from "next/script";
 import FixedAside from "@/components/layout/FixedAside";
-
+import Partners from "@/components/layout/Partners";
 const Pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
   variable: "--font-pretendard",
@@ -70,7 +70,9 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Partners />
         <Footer />
+        <FixedAside />
         <Script
           id="smlog-script"
           dangerouslySetInnerHTML={{
@@ -84,7 +86,6 @@ export default function RootLayout({
           />
         </noscript>
         <Script src="//cdn.smlog.co.kr/core/smart.js" />
-        <FixedAside />
       </body>
     </html>
   );

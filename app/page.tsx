@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Ship from "@/public/img/ship.jpeg";
+
+import RotatedShip from "@/public/img/damned-ship.jpeg";
 import PhoneScreen from "@/public/img/screen.png";
 import SalesMan from "@/public/img/salesman.png";
 import InquiryForm from "@/components/InquiryForm";
@@ -23,7 +25,6 @@ import Diagram from "@/public/img/diagram.png";
 import Link from "next/link";
 import NonCarouselCarList from "@/components/NonCarouselCarList";
 import CarouselCarList from "@/components/CarouselCarList";
-import { PartnerCarousel } from "@/components/partners/PartnerCarousel";
 
 const carList: Car[] = [
   {
@@ -89,33 +90,41 @@ const stages: Stages[] = [
 
 export default function Home() {
   return (
-    <main className="text-primaryText">
+    <main className="text-secondaryText">
       <article className="relative xl:h-[min(80dvh,600px)] isolate bg-black">
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50" />
         <Image
           src={Ship}
           alt="화물선"
-          className="object-cover xl:object-left object-[55%_0%] -z-10"
+          className="object-cover xl:object-left object-[55%_0%] -z-10 lg:block hidden"
           quality={100}
           priority
           fill
         />
-        <div className="flex justify-center xl:gap-12 h-full max-w-screen-8xl mx-auto xl:flex-row flex-col px-2 sm:px-0">
-          <div className="flex flex-col section-top-padding relative flex-1 order-1 xl:order-2">
+        <Image
+          src={RotatedShip}
+          alt="화물선"
+          className="object-cover object-[40%_10%] -z-10 block lg:hidden"
+          quality={100}
+          priority
+          fill
+        />
+        <div className="flex justify-center xl:gap-12 h-full max-w-screen-8xl mx-auto lg:flex-row flex-col px-2 sm:px-0">
+          <div className="flex flex-col lg:section-top-padding relative flex-1 order-2">
             <h1 className="text-white font-bold thirty flex flex-col w-full xl:gap-6">
               <span className="text-primary self-center text-center xl:self-start threeRem">
                 투명한 가격과 프로세스로
               </span>
               <span className="self-center text-center twoTwoFive">
-                신뢰할 수 있는 중고차 수출 술로션
+                신뢰할 수 있는 중고차 수출 솔루션
               </span>
             </h1>
-            <div className="xl:absolute bottom-0 mx-auto">
+            <div className="lg:absolute bottom-0 mx-auto">
               <Image src={SalesMan} alt="영업원" height={300} priority />
             </div>
           </div>
-          <div className="bg-white z-10 xl:m-12 mt-0 mx-auto mb-12 sm:px-6 px-4 py-12 flex-1 max-w-[40rem] rounded-2xl order-2 xl:order-1">
-            <h2 className="thirty text-center font-bold">
+          <div className="bg-white z-10 lg:m-12 mt-6 mx-auto mb-12 sm:px-6 px-4 py-12 flex-1 max-w-[40rem] rounded-2xl order-1 w-full">
+            <h2 className="thirty text-center font-extrabold">
               차량 수출 <span className="text-primary">최고가 견적</span>
             </h2>
             <p className="text-center text-shadow sm:twenty font-medium">
@@ -178,13 +187,13 @@ export default function Home() {
         <CarouselCarList carList={carList} />
       </article>
       <article className="relative isolate">
-        <h4 className="text-center threeRem font-bold my-[clamp(60px,10vw,100px)]">
+        <h4 className="text-center threeRem font-extrabold my-[clamp(60px,10vw,100px)]">
           중고차 수출{" "}
           <span className="text-primary underline underline-offset-8">
             판매 절차
           </span>
         </h4>
-        <ul className="grid grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-y-4 gap-x-0 sm:gap-8 max-w-4xl mx-auto w-full px-4">
+        <ul className="grid grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-y-4 gap-1 sm:gap-8 max-w-4xl mx-auto w-full px-4">
           {stages.map((stage, index) => (
             <li
               key={index}
@@ -206,7 +215,7 @@ export default function Home() {
                   placeholder="blur"
                 />
               </div>
-              <p className="text-center py-4 text-xs sm:text-sm md:text-base lg:twenty font-bold">
+              <p className="text-center py-4 text-xs sm:text-sm md:text-base lg:twenty font-extrabold">
                 <span className="inline-block">{stage.title}</span>
               </p>
             </li>
@@ -236,7 +245,7 @@ export default function Home() {
               />
               <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
                 <span className="">대한중고차수출</span>
-                <span className="sm:twenty font-bold">문의하기</span>
+                <span className="sm:twenty font-extrabold">문의하기</span>
               </p>
             </li>
           </Link>
@@ -252,7 +261,7 @@ export default function Home() {
               />
               <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
                 <span className="">대한중고차수출</span>
-                <span className="sm:twenty font-bold">중고차 직수출</span>
+                <span className="sm:twenty font-extrabold">중고차 직수출</span>
               </p>
             </li>
           </Link>
@@ -268,14 +277,11 @@ export default function Home() {
               />
               <p className="flex flex-col gap-4 self-end ml-auto sm:ml-0">
                 <span className="">대한중고차수출</span>
-                <span className="sm:twenty font-bold">소개</span>
+                <span className="sm:twenty font-extrabold">소개</span>
               </p>
             </li>
           </Link>
         </ul>
-      </article>
-      <article className="flex flex-wrap justify-center gap-x-[clamp(4rem,10vw,8rem)] lg:gap-y-4 gap-y-8 mx-auto px-4 border-t-2 border-primary pt-8 pb-16">
-        <PartnerCarousel speed="normal" />
       </article>
     </main>
   );

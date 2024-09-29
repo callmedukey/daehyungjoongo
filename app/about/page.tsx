@@ -7,7 +7,7 @@ import Car2 from "@/public/img/about-car-2.png";
 import InquiryForm from "@/components/InquiryForm";
 const AboutPage = () => {
   return (
-    <main className="max-w-screen-8xl mx-auto w-full px-4">
+    <main className="max-w-screen-8xl mx-auto w-full px-4 text-secondaryText">
       <article className="relative min-h-[min(60dvh,400px)] mt-12 flex flex-wrap isolate justify-center items-center gap-[clamp(2rem,10vw,12rem)] pt-12 text-center lg:text-left rounded-3xl overflow-clip px-2">
         <div className="absolute inset-0 bg-black opacity-50 " />
         <Image

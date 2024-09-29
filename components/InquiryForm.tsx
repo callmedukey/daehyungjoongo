@@ -51,7 +51,7 @@ const InquiryForm = () => {
       <form
         id="inquiry-form"
         onSubmit={form.handleSubmit(onSubmit)}
-        className="my-12 space-y-8 xl:px-12 scroll-my-60 text-primaryFormText"
+        className="my-12 space-y-8 xl:px-12 scroll-my-60 text-primaryFormText border-[#FFE5E5]"
       >
         <FormField
           control={form.control}

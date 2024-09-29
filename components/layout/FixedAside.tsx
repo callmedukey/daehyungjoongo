@@ -4,7 +4,7 @@ import React from "react";
 const FixedAside = () => {
   return (
     <>
-      <aside className="fixed right-0 bottom-0 w-full md:h-20 h-16 bg-primary text-[1.125rem] md:text-[1.25rem] md:flex md:items-center md:justify-center text-secondaryText md:gap-12 font-bold grid grid-cols-2 items-stretch">
+      <aside className="fixed right-0 bottom-0 w-full md:h-20 h-16 bg-primary text-[1.125rem] md:text-[1.25rem] md:flex md:items-center md:justify-center text-secondaryText md:gap-12 font-bold grid grid-cols-2 items-stretch z-50">
         <p className="text-white hidden md:block">
           내 차 수출하면 얼마 받을 수 있을까?
         </p>

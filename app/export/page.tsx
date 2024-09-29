@@ -41,7 +41,7 @@ const secondList = [
 
 const ExportPage = () => {
   return (
-    <main className="px-4 max-w-screen-8xl mx-auto">
+    <main className="px-4 max-w-screen-8xl mx-auto text-secondaryText">
       <article className="relative min-h-[min(80dvh,600px)] pt-12 sm:pt-16 xl:pt-24 text-center">
         <div className="mx-auto leading-relaxed flex gap-12 items-center">
           <div className="flex-1 basis-[40%] shrink-0">
@@ -119,17 +119,17 @@ const ExportPage = () => {
         <h2 className="font-bold text-primary text-center thirty">
           중고차 직수출이란, 이렇게 진행됩니다!
         </h2>
-        <ul className="flex flex-col gap-4 py-12">
+        <ul className="flex flex-col gap-4 sm:gap-4 py-12">
           {list.map((item, index) => (
             <li
               key={index}
-              className="shadow-md max-w-2xl mx-auto py-2 sm:px-6 px-4 md:px-12 w-full flex justify-center items-center bg-white z-10 rounded-lg"
+              className="shadow-md max-w-2xl mx-auto py-2 sm:px-6 px-2 md:px-12 w-full flex justify-center items-center bg-white z-10 rounded-lg"
             >
-              <div className="w-16 h-24 rounded-lg bg-primaryBlue mr-auto ml-2 md:ml-12 flex items-center justify-center font-bold text-white thirty relative overflow-clip shrink-0">
+              <div className="w-16 h-24 rounded-lg bg-primaryBlue mr-auto ml-2 md:ml-12 flex items-center justify-center font-bold scale-[80%] sm:scale-100 text-white thirty relative overflow-clip shrink-0">
                 <span className="-translate-y-4">{index + 1}</span>
                 <span className="absolute top-[4.85rem] left-0 right-0 size-12 rounded-md bg-white rotate-45 mx-auto" />
               </div>
-              <span className="grow text-left ml-4 sm:ml-24 twenty font-bold">
+              <span className="grow text-left ml-2 sm:ml-24  font-bold sm:twenty text-base">
                 {item}
               </span>
             </li>
