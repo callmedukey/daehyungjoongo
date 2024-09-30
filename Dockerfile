@@ -10,6 +10,8 @@ RUN apk add curl
 COPY package.json package-lock.json ./
 RUN npm install
 RUN npm install -g prisma
+# RUN npm install sharp@0.32.6
+RUN npm install --cpu=x64 --os=linux --libc=musl sharp@0.32.6
 RUN npm install @prisma/client
 
 # Now copy the rest of the app and build it
@@ -29,7 +31,7 @@ USER nonroot
 # Copy the standalone output from the builder image
 COPY --from=builder --chown=nonroot:nonroot /app/.next/standalone ./
 COPY --from=builder --chown=nonroot:nonroot /app/public ./public
-COPY --from=builder --chown=nonroot:nonroot /app/prisma ./prisma/
+COPY --from=builder --chown=nonroot:nonroot /app/prisma ./prisma
 COPY --from=builder --chown=nonroot:nonroot /app/.next/static ./.next/static
 
 
