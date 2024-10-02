@@ -30,6 +30,18 @@ const config: Config = {
         "8xl": "90rem",
       },
       colors: {
+        inputBg: {
+          DEFAULT: "hsl(var(--input-bg))",
+          foreground: "hsl(var(--input-bg-foreground))",
+        },
+        inputLabelColor: {
+          DEFAULT: "hsl(var(--input-label-color))",
+          foreground: "hsl(var(--input-label-color-foreground))",
+        },
+        inputLabelColor2: {
+          DEFAULT: "hsl(var(--input-label-color-2))",
+          foreground: "hsl(var(--input-label-color-2-foreground))",
+        },
         primaryBlue: {
           DEFAULT: "hsl(var(--primary-blue))",
           foreground: "hsl(var(--primary-blue-foreground))",
@@ -100,7 +112,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        pretendard: ["Pretendard", "sans-serif"],
+        pretendard: ["var(--font-pretendard)"],
+        notoSans: ["var(--font-noto-sans)"],
       },
       borderRadius: {
         lg: "var(--radius)",

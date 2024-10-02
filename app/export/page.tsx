@@ -203,11 +203,11 @@ const ExportPage = () => {
           quality={100}
         />
       </article>
-      <div className="bg-white z-10 my-[clamp(6rem,12vw,11rem)] mx-auto px-6 pt-12 flex-1 max-w-[40rem] rounded-2xl border shadow-md">
-        <h2 className="thirty text-primary text-center font-medium">
-          실시간 차량 수출 무료 상담
+      <div className="bg-white z-10 lg:m-12 mt-6 mx-auto mb-12 sm:px-6 px-4 py-6 flex-1 max-w-[40rem] rounded-xl order-1 w-full border border-[#FFE5E5]">
+        <h2 className="thirty text-center font-extrabold">
+          차량 수출 <span className="text-primary">최고가 견적</span>
         </h2>
-        <p className="text-center text-shadow twenty font-medium">
+        <p className="text-center sm:twenty text-footerColor font-medium">
           연식, 주행거리, 사고 유무 상관없이 최고가 매입
         </p>
         <InquiryForm />

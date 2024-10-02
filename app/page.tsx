@@ -91,7 +91,7 @@ const stages: Stages[] = [
 export default function Home() {
   return (
     <main className="text-secondaryText">
-      <article className="relative xl:h-[min(80dvh,600px)] isolate bg-black">
+      <article className="relative xl:min-h-[min(80dvh,600px)] isolate bg-black">
         <div className="absolute inset-0 bg-black/50" />
         <Image
           src={Ship}
@@ -109,7 +109,7 @@ export default function Home() {
           priority
           fill
         />
-        <div className="flex justify-center xl:gap-12 h-full max-w-screen-8xl mx-auto lg:flex-row flex-col px-2 sm:px-0">
+        <div className="flex justify-center xl:gap-24 h-full max-w-screen-8xl mx-auto lg:flex-row flex-col px-2 sm:px-0">
           <div className="flex flex-col lg:section-top-padding relative flex-1 order-2">
             <h1 className="text-white font-bold thirty flex flex-col w-full xl:gap-6">
               <span className="text-primary self-center text-center xl:self-start threeRem">
@@ -123,11 +123,11 @@ export default function Home() {
               <Image src={SalesMan} alt="영업원" height={300} priority />
             </div>
           </div>
-          <div className="bg-white z-10 lg:m-12 mt-6 mx-auto mb-12 sm:px-6 px-4 py-12 flex-1 max-w-[40rem] rounded-2xl order-1 w-full">
+          <div className="bg-white z-10 lg:m-12 mt-6 mx-auto mb-12 sm:px-6 px-4 py-6 flex-1 max-w-[40rem] rounded-xl order-1 w-full">
             <h2 className="thirty text-center font-extrabold">
               차량 수출 <span className="text-primary">최고가 견적</span>
             </h2>
-            <p className="text-center text-shadow sm:twenty font-medium">
+            <p className="text-center sm:twenty text-footerColor font-medium">
               연식, 주행거리, 사고 유무 상관없이 최고가 매입
             </p>
             <InquiryForm />

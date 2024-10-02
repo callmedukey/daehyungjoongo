@@ -21,7 +21,7 @@
     --primary-text: 224, 99%, 28%;
     --secondary-text: 0, 0%, 18%;
     --custom-secondary: 32 98% 51%;
-    --footer-color: 0, 0%, 32%;
+    --footer-color: 0, 0%, 33%;
     --footer-text: 0, 0%, 70%;
     --primary-foreground: 0 0% 98%;
     --primary-blue: 224, 99%, 28%;
@@ -44,6 +44,10 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
 
+    --input-bg: 0 0% 92%;
+    --input-label-color: 0 0% 40%;
+    --input-label-color-2: 0 0% 44%;
+    --onePointFive: 1.5rem;
     --thirty: 1.875rem;
     --threeRem: 3rem;
     --twoTwoFive: 2.25rem;
@@ -82,7 +86,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-pretendard;
   }
 
   .active-nav::after {
@@ -93,15 +97,19 @@
     width: 0.25rem;
     height: 0.25rem;
     border-radius: 50%;
-    background-color: hsl(var(--primary));
+    background-color: black;
     transform: translateX(-50%);
+  }
+
+  .onePointFive {
+    font-size: var(--onePointFive);
   }
 
   .thirty {
     font-size: var(--thirty);
 
     @media (max-width: 768px) {
-      font-size: clamp(1.3rem, 6vw, var(--thirty));
+      font-size: clamp(1.5rem, 6vw, var(--thirty));
     }
   }
 

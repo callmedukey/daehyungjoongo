@@ -35,7 +35,7 @@ const Header = () => {
           loading="eager"
         />
       </a>
-      <nav className="gap-[clamp(1rem,10vw,3.5rem)] hidden md:flex mr-0 ml-auto lg:mr-auto">
+      <nav className="gap-[clamp(1rem,10vw,3.5rem)] hidden md:flex mr-0 ml-auto lg:mr-auto font-notoSans font-extrabold text-black text-[1.25rem]">
         <NavLink href="/">홈</NavLink>
         <NavLink href="/about">회사 소개</NavLink>
         <NavLink href="/export">중고차 직수출</NavLink>

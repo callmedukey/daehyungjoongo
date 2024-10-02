@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Inter, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Script from "next/script";
 import FixedAside from "@/components/layout/FixedAside";
 import Partners from "@/components/layout/Partners";
+
 const Pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
   variable: "--font-pretendard",
-  weight: "100 900",
+  display: "swap",
+  style: "normal",
+});
+
+const NotoSans = Noto_Sans_KR({
+  subsets: ["latin"],
+  weight: "variable",
+  variable: "--font-noto-sans",
   display: "swap",
 });
 
@@ -66,7 +75,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${Pretendard.variable} isolate antialiased font-pretendard leading-normal break-keep font-medium text-secondaryText`}
+        className={`${Pretendard.variable} ${NotoSans.variable}  isolate antialiased leading-normal break-keep font-medium text-secondaryText`}
       >
         <Header />
         {children}
