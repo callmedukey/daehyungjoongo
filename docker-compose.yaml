@@ -1,16 +1,15 @@
 services:
-  app:
-    image: callmedukey/daehanjoongo:latest
-    ports:
-      - "3000:3000"
-    restart: always
-    depends_on:
-      - postgres
-    networks:
-      - app-network
-    environment:
-      - VIPS_NOVECTOR=1
-
+  # app:
+  #   image: callmedukey/daehanjoongo:latest
+  #   ports:
+  #     - "3000:3000"
+  #   restart: always
+  #   depends_on:
+  #     - postgres
+  #   networks:
+  #     - app-network
+  #   environment:
+  #     - VIPS_NOVECTOR=1
   postgres:
     image: "postgres:16.3-alpine"
     restart: always
@@ -22,9 +21,9 @@ services:
       - "5432:5432"
     volumes:
       - ./data:/var/lib/postgresql/data
-    networks:
-      - app-network
+#     networks:
+#       - app-network
 
 
-networks:
-  app-network:
+# networks:
+#   app-network:
