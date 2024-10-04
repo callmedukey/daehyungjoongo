@@ -203,7 +203,7 @@ const ExportPage = () => {
           quality={100}
         />
       </article>
-      <div className="bg-white z-10 lg:m-12 mt-6 mx-auto mb-12 sm:px-6 px-4 py-6 flex-1 max-w-[40rem] rounded-xl order-1 w-full border border-[#FFE5E5]">
+      <div className="bg-white z-10 lg:my-12 mt-6 mx-auto mb-12 sm:px-6 px-4 py-6 flex-1 max-w-[40rem] rounded-xl order-1 w-full border border-[#FFE5E5] ">
         <h2 className="thirty text-center font-extrabold">
           차량 수출 <span className="text-primary">최고가 견적</span>
         </h2>
